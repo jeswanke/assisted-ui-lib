@@ -37,15 +37,18 @@ const ACMClusterDeploymentNetworkingStep: React.FC<ACMClusterDeploymentNetworkin
     clusterDeployment,
     agentClusterInstall,
     agents,
-    pullSecretSet,
   });
   return (
-    <Formik initialValues={initialValues} validationSchema={validationSchema}  innerRef={formRef} onSubmit={noop}>
+    <Formik
+      initialValues={initialValues}
+      validationSchema={validationSchema}
+      innerRef={formRef}
+      onSubmit={noop}
+    >
       <ClusterDeploymentNetworkingForm
         clusterDeployment={clusterDeployment}
         agentClusterInstall={agentClusterInstall}
         agents={agents}
-        pullSecretSet={pullSecretSet}
         onValuesChanged={onValuesChanged}
         {...rest}
       />
